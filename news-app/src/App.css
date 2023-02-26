@@ -1,0 +1,16 @@
+
+#logo{
+  width: 100px;
+  height: 100px;
+  margin: left;
+  display: block;
+
+}
+#welcome{
+  
+  text-align: center;
+
+  margin: auto;
+  width: 950px; 
+  padding: 50px;
+}

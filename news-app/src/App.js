@@ -9,11 +9,11 @@ function App() {
 	  <nav>
       <Link to="/" className="nav-item"id="logo"><h3>News-App</h3></Link>
       <Link to="/Login" className="nav-item"id="login"><h3>Login</h3></Link>
-    
+      
 	  </nav>
       <Routes> 
         <Route path="/" element={<Homepage />}></Route>
-        
+       
         <Route path="/Login" element={<Login />}></Route>
       </Routes>
     </div>

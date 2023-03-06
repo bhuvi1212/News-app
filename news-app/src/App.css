@@ -1,56 +1,28 @@
-
-#logo{
-  position: absolute;
-  top: 0;
-  left: 20px;
-  
-}
-#login
-{position: relative;
-  top: 0;
-  left: 1444px;
-}
-#welcome{
-  position: relative;
-  text-align: center;
+div {
+  width: 100%;
 }
 
-.App {
-  background-color: white;
-}
-
-.Auth-form-container {
+/* Style the navigation bar */
+nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+  align-items: right;
+  justify-content: space-between;
+  background-color: #333;
 }
 
-.Auth-form {
-  width: 420px;
-  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-radius: 8px;
-  background-color: white;
+/* Style the navigation items */
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
 }
 
-.Auth-form-content {
-  padding-left: 12%;
-  padding-right: 12%;
+/* Style the logo item */
+#logo {
+  font-weight: bold;
 }
 
-.Auth-form-title {
-  text-align: center;
-  margin-bottom: 1em;
-  font-size: 24px;
-  color: rgb(34, 34, 34);
-  font-weight: 800;
-}
-
-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: rgb(34, 34, 34);
+/* Change the color of the navigation items on hover */
+.nav-item:hover {
+  color: yellow;
 }

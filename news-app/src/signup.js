@@ -1,101 +1,85 @@
-function Login() {
-    return( 
-        export default function (props) {
-            let [authMode, setAuthMode] = useState("signin")
-          
-            const changeAuthMode = () => {
-              setAuthMode(authMode === "signin" ? "signup" : "signin")
-            }
-          
-            if (authMode === "signin") {
-              return (
-                <div className="Auth-form-container">
-                  <form className="Auth-form">
-                    <div className="Auth-form-content">
-                      <h3 className="Auth-form-title">Sign In</h3>
-                      <div className="text-center">
-                        Not registered yet?{" "}
-                        <span className="link-primary" onClick={changeAuthMode}>
-                          Sign Up
-                        </span>
-                      </div>
-                      <div className="form-group mt-3">
-                        <label>Email address</label>
-                        <input
-                          type="email"
-                          className="form-control mt-1"
-                          placeholder="Enter email"
-                        />
-                      </div>
-                      <div className="form-group mt-3">
-                        <label>Password</label>
-                        <input
-                          type="password"
-                          className="form-control mt-1"
-                          placeholder="Enter password"
-                        />
-                      </div>
-                      <div className="d-grid gap-2 mt-3">
-                        <button type="submit" className="btn btn-primary">
-                          Submit
-                        </button>
-                      </div>
-                      <p className="text-center mt-2">
-                        Forgot <a href="#">password?</a>
-                      </p>
-                    </div>
-                  </form>
-                </div>
-              )
-            }
-          
-            return (
-              <div className="Auth-form-container">
-                <form className="Auth-form">
-                  <div className="Auth-form-content">
-                    <h3 className="Auth-form-title">Sign In</h3>
-                    <div className="text-center">
-                      Already registered?{" "}
-                      <span className="link-primary" onClick={changeAuthMode}>
-                        Sign In
-                      </span>
-                    </div>
-                    <div className="form-group mt-3">
-                      <label>Full Name</label>
-                      <input
-                        type="email"
-                        className="form-control mt-1"
-                        placeholder="e.g Jane Doe"
-                      />
-                    </div>
-                    <div className="form-group mt-3">
-                      <label>Email address</label>
-                      <input
-                        type="email"
-                        className="form-control mt-1"
-                        placeholder="Email Address"
-                      />
-                    </div>
-                    <div className="form-group mt-3">
-                      <label>Password</label>
-                      <input
-                        type="password"
-                        className="form-control mt-1"
-                        placeholder="Password"
-                      />
-                    </div>
-                    <div className="d-grid gap-2 mt-3">
-                      <button type="submit" className="btn btn-primary">
-                        Submit
-                      </button>
-                    </div>
-                    <p className="text-center mt-2">
-                      Forgot <a href="#">password?</a>
-                    </p>
-                  </div>
-                </form>
-              </div>
-            )
-  )
+
+import React from 'react';
+import "./signup.css";
+import { useNavigate } from 'react-router-dom';
+// Define a custom component for the sign up form
+function Signup() {
+  // Use React hooks to manage the state of the form inputs and errors
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [confirmPassword, setConfirmPassword] = React.useState('');
+  const [errors, setErrors] = React.useState({});
+
+  // Use React hook to access the history object for navigation
+  const history = useNavigate();
+
+  // Define a function to handle the form submission
+  function handleSubmit(event) {
+    // Prevent the default browser behavior of reloading the page
+    event.preventDefault();
+
+    // Validate the form inputs and set errors if any
+    let isValid = true;
+    let newErrors = {};
+    
+
+    // Check if username is empty or less than 8 characters or contains spaces
+    if ( username.length < 8 || username.includes(' ')) {
+      isValid = false;
+      newErrors.username = 'Username must be at least 8 characters long and cannot contain spaces.';
+    }
+    if (!username || !password) {
+      isValid = false;
+      newErrors.username = 'Username and password are required.';
+    }
+
+    // Check if password is empty or less than 8 characters or contains spaces or does not meet complexity requirements
+    if (!password || password.length < 8 || password.includes(' ') || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[^A-Za-z]/.test(password)) {
+      isValid = false;
+      newErrors.password = 'Password must be at least 8 characters long and cannot contain spaces. It must also contain at least one upper case letter, one lower case letter and one non-letter character.';
+    }
+
+    // Check if confirm password is empty or does not match password
+    if (!confirmPassword || confirmPassword !== password) {
+      isValid = false;
+      newErrors.confirmPassword = 'Confirm password must match password.';
+    }
+
+    // Set the errors state with the new errors object
+    setErrors(newErrors);
+
+    // If the form is valid, navigate to the landing page as signed in
+    if (isValid) {
+      history.push('/landing');
+      // You can also add some logic here to store the user credentials in local storage or call an API to register the user in a database
+    }
+  }
+
+  // Return the JSX code for rendering the sign up form component
+  return (
+    <div className="sign-up-form">
+      <h1>Sign Up</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" value={username} onChange={(event) => setUsername(event.target.value.trim())} />
+          {errors.username && <p className="error">{errors.username}</p>}
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" value={password} onChange={(event) => setPassword(event.target.value.trim())} />
+          {errors.password && <p className="error">{errors.password}</p>}
+        </div>
+        <div className="form-group">
+          <label htmlFor="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value.trim())} />
+          {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  );
 }
-export default Login;
+
+// Export the sign up form component as default
+export default Signup;

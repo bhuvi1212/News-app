@@ -1,5 +1,6 @@
 
 import React from 'react';
+import "./signup.css";
 import { useNavigate } from 'react-router-dom';
 // Define a custom component for the sign up form
 function Signup() {
@@ -20,11 +21,16 @@ function Signup() {
     // Validate the form inputs and set errors if any
     let isValid = true;
     let newErrors = {};
+    
 
     // Check if username is empty or less than 8 characters or contains spaces
-    if (!username || username.length < 8 || username.includes(' ')) {
+    if ( username.length < 8 || username.includes(' ')) {
       isValid = false;
       newErrors.username = 'Username must be at least 8 characters long and cannot contain spaces.';
+    }
+    if (!username || !password) {
+      isValid = false;
+      newErrors.username = 'Username and password are required.';
     }
 
     // Check if password is empty or less than 8 characters or contains spaces or does not meet complexity requirements

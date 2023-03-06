@@ -1,6 +1,11 @@
 import "./App.css";
 import Homepage from "./Homepage";
+<<<<<<< Updated upstream
 import Login from "./login";
+=======
+import Login from "./login"; 
+import Landing from "./Landing";
+>>>>>>> Stashed changes
 import { Routes, Route, Link } from "react-router-dom";
 import Signup from "./signup";
 function App() {
@@ -21,8 +26,18 @@ function App() {
     
 
 
+<<<<<<< Updated upstream
     
   );
+=======
+    <Routes>
+      <Route path="/" element={<Homepage />}></Route>
+      <Route path="/signin" element={<signin />}></Route>
+      <Route path="/Login" element={<Login />}></Route>
+      <Route path="/landing" element={<Landing props={{loggedIn, username}}/>}></Route>
+    </Routes>
+  </div>);
+>>>>>>> Stashed changes
 };
 
 export default App;

@@ -48,11 +48,23 @@ function Signup() {
     // Set the errors state with the new errors object
     setErrors(newErrors);
 
+<<<<<<< Updated upstream
     // If the form is valid, navigate to the landing page as signed in
     if (isValid) {
       history.push('/landing');
       // You can also add some logic here to store the user credentials in local storage or call an API to register the user in a database
     }
+=======
+    // post request to the backend with username and password
+    axios
+      .post("http://localhost:5000/api/signup", { username, password })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+>>>>>>> Stashed changes
   }
 
   // Return the JSX code for rendering the sign up form component

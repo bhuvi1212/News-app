@@ -30,11 +30,12 @@ function Login() {
     return;
     }
     if (!username || username.length < 8 || username.includes(' ') || !/[A-Z]/.test(username) || !/[a-z]/.test(username) || !/[^A-Za-z]/.test(username)) {
-      setError("username mmust be at least 8 characters long and cannot contain spaces. It must also contain at least one upper case letter, one lower case letter and one non-letter character.");
+      setError("username must be at least 8 characters long and cannot contain spaces. It must also contain at least one upper case letter, one lower case letter and one non-letter character.");
       return;
     }
     // send a post request to the backend with username and password
     axios
+<<<<<<< Updated upstream
       .post("/api/login", { username, password })
       .then((res) => {
         // if successful, redirect to the landing page
@@ -44,6 +45,18 @@ function Login() {
         // if error, display the error message
         setError(err.response.data.message);
       });
+=======
+    .post("http://localhost:3000/signin", { username, password })
+    .then((res) => {
+      console.log(res);
+      localStorage.setItem('username', username);
+      localStorage.setItem('loggedIn', true);
+     
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+>>>>>>> Stashed changes
   };
 
   return (

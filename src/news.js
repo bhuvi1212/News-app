@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
-
-function News() {
+function News(props) {
     const [newsData, setNewsData] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         getNewsData();
-    }, []);
+    }, [props.category]);
 
     async function getNewsData() {
         setLoading(true);
         try {
-            const resp = await axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=e22725d642174ef0b0f1e1d3ec449714");
+            const resp = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=e22725d642174ef0b0f1e1d3ec449714`);
             setNewsData(resp.data.articles);
             setLoading(false);
         } catch (error) {

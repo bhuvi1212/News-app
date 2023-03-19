@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "newsapp",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 30,
+      "apiKeyExpirationDate": "2023-04-18T04:08:36.575Z",
+      "keyDescription": "api key description"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authNewsapp"
+      }
+    ]
+  }
+}

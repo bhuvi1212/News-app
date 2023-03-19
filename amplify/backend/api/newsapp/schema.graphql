@@ -1,0 +1,12 @@
+type CreateCategoryInput @model @auth(rules: [{allow: public}, {allow: private}, {allow: owner}]) {
+  id: ID!
+  username: String
+  category: String
+}
+
+type Todo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+}
+ 

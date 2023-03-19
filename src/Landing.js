@@ -34,7 +34,7 @@ function Landing() {
                     <Button sx={{ flexGrow: 0 }} color="inherit" onClick={routeChange} >login</Button>
                 </Toolbar>
             </AppBar>
-            <News />
+            <News category="general" />
         </div>
 
 

@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "newsapp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authNewsapp",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2023-03-19T03:59:35.243Z"
+}

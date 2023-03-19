@@ -1,4 +1,42 @@
 {
+  "api": {
+    "newsapp": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "Newsapp"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authNewsapp"
+              }
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDate": "2023-04-18T04:08:36.575Z",
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
   "auth": {
     "Newsapp": {
       "customAuth": false,

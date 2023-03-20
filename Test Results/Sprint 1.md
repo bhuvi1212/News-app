@@ -1,7 +1,7 @@
 Requirements for Landing page
 Requirement 1: 
 – Test Case ID-0001: When not signed in, the landing page shall display a method 
-(button or link) to navigate to a “Sign-in” page# News-app
+(button or link) to navigate to a “Sign-in” page# News-app<br/>
 Requirement 2:
 – Test Case ID-0002: When signed in, the landing page shall display the user’s 
 name

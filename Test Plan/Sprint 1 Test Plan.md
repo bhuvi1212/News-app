@@ -23,7 +23,7 @@ In Sprint 1, we are planning to test:<br>
  This page displays the news headlines and a short discription of the news.<br>
  The landing page give an option for the user to sign-in/sign-up. <br>
  If the user is already signed-in, the page should display the user name in the top of the page.<br>
- <h3></h3>
+ <h3>Sign-out</h3>
  This button is displayed on top of the page when the user is logged-in. This button enables the user to log out of the application. All the saved preferences are removed from the application when the user loggs out.
  <h1>Pass/Fail criteria</h1>
 

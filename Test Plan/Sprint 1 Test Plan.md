@@ -30,9 +30,11 @@ In Sprint 1, we are planning to test:<br>
  The log-in page should satisfy all the specifications that are required. only then should the application allow the user to login. The user should be present in the database.
  <h4>Sign-in:</h4>
  All the fields should match the requirements that are mentioned above. If all the details satisfy the conditions, the application should create a new user and input the details into the database. The application should allow the new user to log-in to the application using the new details.
- <h4>Landing page</h4>
+ <h4>Landing page:</h4>
  The landing page should display options for the user to log-in/sign-up when the user is not logged-in to the application.<br>
  When the user is logged-in, the application should display the user name on the top of the application.
+ <h4>Sign-out:</h4>
+ The application should show the option to sign out of the application when the user is logged-in. This button should allow the user to sign out of the application which removes all the settings from the application as soon as the log out is done.
 <h1>Testing Tasks</h1>
 
 <h1>Responsibilities</h1>

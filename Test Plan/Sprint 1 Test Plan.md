@@ -19,7 +19,13 @@ In Sprint 1, we are planning to test:<br>
  The password should be atleast 8 characters long with chould not contain any spaces. The password should contain atleast one upper case character, one lower case charracter and one special character.<br>
  The Confirm password field should match with the password field<br>
  The user name should be the name of the user.
-<h1>Pass/Fail criteria</h1>
+ <h3>Landing page</h3>
+ This page displays the news headlines and a short discription of the news.<br>
+ The landing page give an option for the user to sign-in/sign-up. <br>
+ If the user is already signed-in, the page should display the user name in the top of the page.<br>
+ <h3></h3>
+ This button is displayed on top of the page when the user is logged-in. This button enables the user to log out of the application. All the saved preferences are removed from the application when the user loggs out.
+ <h1>Pass/Fail criteria</h1>
 
 <h1>Testing Tasks</h1>
 <h1>Responsibilities</h1>

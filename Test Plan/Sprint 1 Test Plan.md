@@ -6,9 +6,11 @@ In Sprint 1, we are planning to test:<br>
 - Sign-up<br>
 - Landing page<br>
 - Sign-out<br>
-<h1>Features to be tested</h1>
 <h1>Approach</h1>
+ <h2>Log-in: </h2>
+ The login details must match with the details that are present in the database.
 <h1>Pass/Fail criteria</h1>
+
 <h1>Testing Tasks</h1>
 <h1>Responsibilities</h1>
 <h1>Schedule</h1>

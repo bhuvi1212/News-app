@@ -8,7 +8,10 @@ In Sprint 1, we are planning to test:<br>
 - Sign-out<br>
 <h1>Approach</h1>
  <h3>Log-in: </h3>
+ The login page should contain an input field that takes the user-name/Email id and an input field to take the password.
  The login details must match with the details that are present in the database.
+ <h3>Sign-up: </h3>
+ 
 <h1>Pass/Fail criteria</h1>
 
 <h1>Testing Tasks</h1>

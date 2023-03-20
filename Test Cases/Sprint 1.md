@@ -92,11 +92,11 @@ Requirements for Status Codes:<br/>
 |ID-0026|Sri Harsha|03/15/2023|Pass|One upper case is mandatory|
 |ID-0027|Sri Harsha|03/15/2023|Pass|One lower case is mandatory|
 |ID-0028|Sri Harsha|03/15/2023|Pass|One special character is mandatory|
-|ID-0029|||||
-|ID-0030|||||
-|ID-0031|||||
-|ID-0032|||||
-|ID-0033|||||
+|ID-0029|Thanmai|03/16/2023|Pass|After correct credentials are given it is naviating to the landing page as signed in|
+|ID-0030|Thanmai|03/16/2023|Pass|The message displays saying the input is wrong|
+|ID-0031|Thanmai|03/16/2023|Pass|The Database is successfully fetching the data|
+|ID-0032|Thanmai|03/16/2023|Pass|They are succesfully being displayed|
+|ID-0033|Thanmai|03/16/2023|Pass|They are succesfully being displayed|
 |ID-0034|||||
 |ID-0035|||||
 |ID-0036|||||

@@ -8,10 +8,17 @@ In Sprint 1, we are planning to test:<br>
 - Sign-out<br>
 <h1>Approach</h1>
  <h3>Log-in: </h3>
- The login page should contain an input field that takes the user-name/Email id and an input field to take the password.
+ The login page should contain an input field that takes the user-name/Email id and an input field to take the password.<br>
  The login details must match with the details that are present in the database.
  <h3>Sign-up: </h3>
- 
+ The sign-up page should contain 4 input fileds:<br>
+ - Email-id<br>
+ - Password<br>
+ - Confirm Password<br>
+ - User name<br>
+ The password should be atleast 8 characters long with chould not contain any spaces. The password should contain atleast one upper case character, one lower case charracter and one special character.<br>
+ The Confirm password field should match with the password field<br>
+ The user name should be the name of the user.
 <h1>Pass/Fail criteria</h1>
 
 <h1>Testing Tasks</h1>

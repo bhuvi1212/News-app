@@ -52,4 +52,5 @@ Requirement 5:
 – When an incorrect entry is made, display an appropriate message.
 
 | Test Case ID | Name of the Tester | Pass/Fail | 
-| ID-0001      | 
+|---|---|---|
+| ID-0001|Sri Harsha|Pass| 

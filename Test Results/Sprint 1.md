@@ -65,10 +65,10 @@ Requirements for Status Codes:
 
 | Test Case ID | Name of the Tester |Date| Pass/Fail | comment |
 |---|---|---|---|---|
-|ID-0001|Sri Harsha|03/08/2023|Pass||
-|ID-0002|Sri Harsha|03/08/2023|Pass||
-|ID-0003|Sri Harsha|03/08/2023|Pass||
-|ID-0004|Sri Harsha|03/08/2023|Pass||
+|ID-0001|Sri Harsha|03/08/2023|Pass|The landing page shows a sign in button|
+|ID-0002|Sri Harsha|03/08/2023|Pass|The user name is displayed when the user is signed in|
+|ID-0003|Sri Harsha|03/08/2023|Pass|Sign out option in displayed when the user is logged in|
+|ID-0004|Sri Harsha|03/08/2023|Pass|Sign in form is available to the users|
 |ID-0005|||||
 |ID-0006|||||
 |ID-0007|||||

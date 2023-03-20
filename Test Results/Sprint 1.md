@@ -86,12 +86,12 @@ Requirements for Status Codes:
 |ID-0020|Bhuvan|03/11/2023|Fail|Mail ID is used to login instead of the User Name|
 |ID-0021|||||
 |ID-0022|||||
-|ID-0023|Sri Harsha|03/15/2023|Pass||
-|ID-0024|Sri Harsha|03/15/2023|Pass||
-|ID-0025|Sri Harsha|03/15/2023|Pass||
-|ID-0026|Sri Harsha|03/15/2023|Pass||
-|ID-0027|Sri Harsha|03/15/2023|Pass||
-|ID-0028|Sri Harsha|03/15/2023|Pass||
+|ID-0023|Sri Harsha|03/15/2023|Pass|The Page wont accept the password if there are spaces in it|
+|ID-0024|Sri Harsha|03/15/2023|Pass|Minimum length of the password is 8 characters|
+|ID-0025|Sri Harsha|03/15/2023|Pass|The page igores all the spaces that are added after the mail id|
+|ID-0026|Sri Harsha|03/15/2023|Pass|One upper case is mandatory|
+|ID-0027|Sri Harsha|03/15/2023|Pass|One lower case is mandatory|
+|ID-0028|Sri Harsha|03/15/2023|Pass|One special character is mandatory|
 |ID-0029|||||
 |ID-0030|||||
 |ID-0031|||||

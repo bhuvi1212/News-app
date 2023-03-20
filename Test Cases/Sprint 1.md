@@ -69,11 +69,11 @@ Requirements for Status Codes:<br/>
 |ID-0002|Sri Harsha|03/08/2023|Pass|The user name is displayed when the user is signed in|
 |ID-0003|Sri Harsha|03/08/2023|Pass|Sign out option in displayed when the user is logged in|
 |ID-0004|Sri Harsha|03/08/2023|Pass|Sign in form is available to the users|
-|ID-0005|||||
-|ID-0006|||||
-|ID-0007|||||
-|ID-0008|||||
-|ID-0009|||||
+|ID-0005|Bhuvan Sai|03/10/2023|Pass|The text box is available to collect the users uniformation|
+|ID-0006|Bhuvan Sai|03/10/2023|Pass|Username is required in this field|
+|ID-0007|Bhuvan Sai|03/10/2023|Pass|The text box is available to collect the password entered by the user|
+|ID-0008|Bhuvan Sai|03/10/2023|Pass|Password is required in this field|
+|ID-0009|Bhuvan Sai|03/10/2023|Pass|Button was used to submit the form|
 |ID-0011|||||
 |ID-0012|||||
 |ID-0013|||||
@@ -83,7 +83,7 @@ Requirements for Status Codes:<br/>
 |ID-0017|||||
 |ID-0018|||||
 |ID-0019|||||
-|ID-0020|Bhuvan|03/11/2023|Fail|Mail ID is used to login instead of the User Name|
+|ID-0020|Bhuvan Sai |03/11/2023|Fail|Mail ID is used to login instead of the User Name|
 |ID-0021|||||
 |ID-0022|||||
 |ID-0023|Sri Harsha|03/15/2023|Pass|The Page wont accept the password if there are spaces in it|

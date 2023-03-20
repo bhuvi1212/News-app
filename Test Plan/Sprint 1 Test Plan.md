@@ -7,7 +7,7 @@ In Sprint 1, we are planning to test:<br>
 - Landing page<br>
 - Sign-out<br>
 <h1>Approach</h1>
- <h3>Log-in: <h3>
+ <h3>Log-in: </h3>
  The login details must match with the details that are present in the database.
 <h1>Pass/Fail criteria</h1>
 

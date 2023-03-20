@@ -83,9 +83,9 @@ Requirements for Status Codes:<br/>
 |ID-0017|||||
 |ID-0018|||||
 |ID-0019|||||
-|ID-0020|Bhuvan Sai |03/11/2023|Fail|Mail ID is used to login instead of the User Name|
-|ID-0021|||||
-|ID-0022|||||
+|ID-0020|Bhuvan Sai|03/11/2023|Fail|Mail ID is used to login instead of the User Name|
+|ID-0021|Bhuvan Sai|03/15/2023|Pass|This field does not accept any spaces|
+|ID-0022|Bhuvan Sai|03/15/2023|Pass|The trailing spaces are ignored|
 |ID-0023|Sri Harsha|03/15/2023|Pass|The Page wont accept the password if there are spaces in it|
 |ID-0024|Sri Harsha|03/15/2023|Pass|Minimum length of the password is 8 characters|
 |ID-0025|Sri Harsha|03/15/2023|Pass|The page igores all the spaces that are added after the mail id|

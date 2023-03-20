@@ -74,15 +74,15 @@ Requirements for Status Codes:<br/>
 |ID-0007|Bhuvan Sai|03/10/2023|Pass|The text box is available to collect the password entered by the user|
 |ID-0008|Bhuvan Sai|03/10/2023|Pass|Password is required in this field|
 |ID-0009|Bhuvan Sai|03/10/2023|Pass|Button was used to submit the form|
-|ID-0011|||||
-|ID-0012|||||
-|ID-0013|||||
-|ID-0014|||||
-|ID-0015|||||
-|ID-0016|||||
-|ID-0017|||||
-|ID-0018|||||
-|ID-0019|||||
+|ID-0011|Leela|03/11/2023|Pass|When improper credentials are given as input it displays invalid user details |
+|ID-0012|Leela|03/11/2023|Pass|The form is displayed for the user to sign in |
+|ID-0013|Leela|03/11/2023|Pass|The form uses text box to collect the user name|
+|ID-0014|Leela|03/11/2023|Pass|This is a required field|
+|ID-0015|Leela|03/11/2023|Pass|The form uses text box to collect the password|
+|ID-0016|Leela|03/11/2023|Pass|This is a required filed|
+|ID-0017|Leela|03/11/2023|Pass|The textbox is useed to collect a confirmation password|
+|ID-0018|Leela|03/11/2023|Pass|This is a required field where the password is confirmed|
+|ID-0019|Leela|03/11/2023|Pass|The submit button is displayed for the form to be submitted|
 |ID-0020|Bhuvan Sai|03/11/2023|Fail|Mail ID is used to login instead of the User Name|
 |ID-0021|Bhuvan Sai|03/15/2023|Pass|This field does not accept any spaces|
 |ID-0022|Bhuvan Sai|03/15/2023|Pass|The trailing spaces are ignored|

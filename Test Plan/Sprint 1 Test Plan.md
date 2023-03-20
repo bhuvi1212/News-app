@@ -6,6 +6,7 @@ In Sprint 1, we are planning to test:<br>
 - Sign-up<br>
 - Landing page<br>
 - Sign-out<br>
+
 <h1>Approach</h1>
  <h4>Log-in: </h4>
  The login page should contain an input field that takes the user-name/Email id and an input field to take the password.<br>
@@ -25,6 +26,7 @@ In Sprint 1, we are planning to test:<br>
  If the user is already signed-in, the page should display the user name in the top of the page.<br>
  <h4>Sign-out:</h4>
  This button is displayed on top of the page when the user is logged-in. This button enables the user to log out of the application. All the saved preferences are removed from the application when the user loggs out.
+ 
  <h1>Pass/Fail criteria</h1>
  <h4>Log-in:<h4>
  The log-in page should satisfy all the specifications that are required. only then should the application allow the user to login. The user should be present in the database.
@@ -35,6 +37,5 @@ In Sprint 1, we are planning to test:<br>
  When the user is logged-in, the application should display the user name on the top of the application.
  <h4>Sign-out:</h4>
  The application should show the option to sign out of the application when the user is logged-in. This button should allow the user to sign out of the application which removes all the settings from the application as soon as the log out is done.
-<h1>Testing Tasks</h1>
 
 <h1>Responsibilities</h1>

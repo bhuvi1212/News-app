@@ -1,5 +1,6 @@
 <h1>Introduction</h1>
 We are developing a news application where several users can access news according to their field of interest. We are using a news api to gather news headlines and to display the news to the users. The users will have access to fields like general, sports, business, etc. the user can sign in to the application so that they can save their field of interest.
+
 <h1>Test Items</h1>
 In Sprint 1, we are planning to test:<br>
 - Log-in<br>
@@ -37,5 +38,3 @@ In Sprint 1, we are planning to test:<br>
  When the user is logged-in, the application should display the user name on the top of the application.
  <h4>Sign-out:</h4>
  The application should show the option to sign out of the application when the user is logged-in. This button should allow the user to sign out of the application which removes all the settings from the application as soon as the log out is done.
-
-<h1>Responsibilities</h1>

@@ -5,5 +5,5 @@ In Sprint 1, we are planning to test the basic features such as login, sign up a
 <h1>Approach</h1>
 <h1>Pass/Fail criteria</h1>
 <h1>Testing Tasks</h1>
-<h1>Responcibilities</h1>
+<h1>Responsibilities</h1>
 <h1>Schedule</h1>

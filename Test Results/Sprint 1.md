@@ -65,37 +65,38 @@ Requirements for Status Codes:
 
 | Test Case ID | Name of the Tester |Date| Pass/Fail | comment |
 |---|---|---|---|---|
-|ID-0001|Sri Harsha||||
-|ID-0002|Sri Harsha||||
-|ID-0003|Sri Harsha||||
-|ID-0004|Sri Harsha||||
-|ID-0005|Sri Harsha||||
-|ID-0006|Sri Harsha||||
-|ID-0007|Sri Harsha||||
-|ID-0008|Sri Harsha||||
-|ID-0009|Sri Harsha||||
-|ID-0011|Sri Harsha||||
-|ID-0012|Sri Harsha||||
-|ID-0013|Sri Harsha||||
-|ID-0014|Sri Harsha||||
-|ID-0015|Sri Harsha||||
-|ID-0016|Sri Harsha||||
-|ID-0017|Sri Harsha||||
-|ID-0018|Sri Harsha||||
-|ID-0019|Sri Harsha||||
-|ID-0021|Sri Harsha||||
-|ID-0022|Sri Harsha||||
-|ID-0023|Sri Harsha||||
-|ID-0024|Sri Harsha||||
-|ID-0025|Sri Harsha||||
-|ID-0026|Sri Harsha||||
-|ID-0027|Sri Harsha||||
-|ID-0028|Sri Harsha||||
-|ID-0029|Sri Harsha||||
-|ID-0030|Sri Harsha||||
-|ID-0031|Sri Harsha||||
-|ID-0032|Sri Harsha||||
-|ID-0033|Sri Harsha||||
-|ID-0034|Sri Harsha||||
-|ID-0035|Sri Harsha||||
-|ID-0036|Sri Harsha||||
+|ID-0001|Sri Harsha|03/08/2023|Pass||
+|ID-0002|Sri Harsha|03/08/2023|Pass||
+|ID-0003|Sri Harsha|03/08/2023|Pass||
+|ID-0004|Sri Harsha|03/08/2023|Pass||
+|ID-0005|||||
+|ID-0006|||||
+|ID-0007|||||
+|ID-0008|||||
+|ID-0009|||||
+|ID-0011|||||
+|ID-0012|||||
+|ID-0013|||||
+|ID-0014|||||
+|ID-0015|||||
+|ID-0016|||||
+|ID-0017|||||
+|ID-0018|||||
+|ID-0019|||||
+|ID-0020|Bhuvan|03/11/2023|Fail|Mail ID is used to login instead of the User Name|
+|ID-0021|||||
+|ID-0022|||||
+|ID-0023|Sri Harsha|03/15/2023|Pass||
+|ID-0024|Sri Harsha|03/15/2023|Pass||
+|ID-0025|Sri Harsha|03/15/2023|Pass||
+|ID-0026|Sri Harsha|03/15/2023|Pass||
+|ID-0027|Sri Harsha|03/15/2023|Pass||
+|ID-0028|Sri Harsha|03/15/2023|Pass||
+|ID-0029|||||
+|ID-0030|||||
+|ID-0031|||||
+|ID-0032|||||
+|ID-0033|||||
+|ID-0034|||||
+|ID-0035|||||
+|ID-0036|||||

@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Auth, Hub } from "aws-amplify"
 import { Navigate } from 'react-router';
 import { API } from 'aws-amplify/lib-esm/index.js';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Authenticator } from '@aws-amplify/ui-react';
 import { AppBar, Toolbar, Typography, Button, Box, Select, MenuItem } from '@mui/material';
 import News from './news.js';
-
+import "./Dashboard.css";
 function Dashboard() {
     const [user, setUser] = useState(null);
-    const [category, setCategory] = useState("general");
+    const [categories, setCategories] = useState(["general"]);
 
     useEffect(() => {
         async function userDetails() {
@@ -18,20 +18,19 @@ function Dashboard() {
                 setUser(user);
                 const username = user.username;
                 const categoryData = await API.graphql({
-                    query: /* GraphQL */ `
-                        query GetCreateCategoryInput($username: String!) {
-                            getCreateCategoryInput(username: $username) {
-                                category
-                            }
-                        }
-                    `,
-                    variables: { username }
+                    query: /*GraphQL*/ `query GetCreateCategoryInput($username: String!) {
+              getCreateCategoryInput(username: $username) {
+                category
+              }
+            }`,
+                    variables: { username },
                 });
-                const category = categoryData.data.getCreateCategoryInput?.category || 'general';
-                setCategory(category);
+                const category =
+                    categoryData.data.getCreateCategoryInput?.category || ["general"];
+                setCategories(category);
             } catch (err) {
-                console.log('Error retrieving user category:', err);
-                setCategory('general');
+                console.log("Error retrieving user category:", err);
+                setCategories(["general"]);
             }
         }
         userDetails();
@@ -41,7 +40,7 @@ function Dashboard() {
         try {
             await Auth.signOut({ global: true });
         } catch (error) {
-            console.log('error signing out: ', error);
+            console.log("error signing out:", error);
         }
     }
 
@@ -51,10 +50,10 @@ function Dashboard() {
         console.log("No user found");
     }
 
-    !user && <Navigate to="/login" />
+    !user && <Navigate to="/login" />;
 
     const handleChange = (event) => {
-        setCategory(event.target.value);
+        setCategories(event.target.value);
     };
 
     return (
@@ -70,24 +69,46 @@ function Dashboard() {
                         </Typography>
                         <Box sx={{ minWidth: 120 }}>
                             <Select
-                                value={category}
+                                variant='outlined'
+                                sx={{ color: "white", borderColor: "none" }}
+                                multiple
+                                value={categories}
                                 onChange={handleChange}
                                 displayEmpty
-                                inputProps={{ 'aria-label': 'Without label' }}
-                            >
-                                <MenuItem value="general">General</MenuItem>
-                                <MenuItem value="business">Business</MenuItem>
-                                <MenuItem value="entertainment">Entertainment</MenuItem>
-                                <MenuItem value="health">Health</MenuItem>
-                                <MenuItem value="science">Science</MenuItem>
-                                <MenuItem value="sports">Sports</MenuItem>
-                                <MenuItem value="technology">Technology</MenuItem>
+                                inputProps={{ "aria-label": "Without label" }}
+                            >    <MenuItem value="general" color="inherit">
+                                    General
+                                </MenuItem>
+                                <MenuItem value="business" color="inherit">
+                                    Business
+                                </MenuItem>
+                                <MenuItem value="entertainment" color="inherit">
+                                    Entertainment
+                                </MenuItem>
+                                <MenuItem value="health" color="inherit">
+                                    Health
+                                </MenuItem>
+                                <MenuItem value="science" color="inherit">
+                                    Science
+                                </MenuItem>
+                                <MenuItem value="sports" color="inherit">
+                                    Sports
+                                </MenuItem>
+                                <MenuItem value="technology" color="inherit">
+                                    Technology
+                                </MenuItem>
                             </Select>
                         </Box>
-                        <Button color="inherit" onClick={signOut}>Sign Out</Button>
+                        <Button color="inherit" onClick={signOut}>
+                            Sign Out
+                        </Button>
                     </Toolbar>
                 </AppBar>
-                <News category={category} />
+                <Box id="news">
+                    {categories.map((category) => (
+                        <News key={category} category={category} />
+                    ))}
+                </Box>
             </Authenticator>
         </div>
     );

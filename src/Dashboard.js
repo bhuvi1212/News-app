@@ -4,9 +4,11 @@ import { Navigate } from 'react-router';
 import { API } from 'aws-amplify/lib-esm/index.js';
 // import { Link } from "react-router-dom";
 import { Authenticator } from '@aws-amplify/ui-react';
-import { AppBar, Toolbar, Typography, Button, Box, Select, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box, Select, MenuItem, IconButton } from '@mui/material';
+import { Refresh } from '@mui/icons-material';
 import News from './news.js';
 import "./Dashboard.css";
+
 function Dashboard() {
     const [user, setUser] = useState(null);
     const [categories, setCategories] = useState(["general"]);
@@ -55,6 +57,9 @@ function Dashboard() {
     const handleChange = (event) => {
         setCategories(event.target.value);
     };
+    const handleRefresh = () => {
+        window.location.reload();
+    };
 
     return (
         <div>
@@ -102,6 +107,9 @@ function Dashboard() {
                         <Button color="inherit" onClick={signOut}>
                             Sign Out
                         </Button>
+                        <IconButton color="inherit" onClick={handleRefresh}>
+                            <Refresh />
+                        </IconButton>
                     </Toolbar>
                 </AppBar>
                 <Box id="news">

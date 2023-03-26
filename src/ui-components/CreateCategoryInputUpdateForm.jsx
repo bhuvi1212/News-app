@@ -14,7 +14,7 @@ import { DataStore } from "aws-amplify";
 export default function CreateCategoryInputUpdateForm(props) {
   const {
     id: idProp,
-    createCategoryInput,
+    createCategoryInput: createCategoryInputModelProp,
     onSuccess,
     onError,
     onSubmit,
@@ -39,16 +39,16 @@ export default function CreateCategoryInputUpdateForm(props) {
     setErrors({});
   };
   const [createCategoryInputRecord, setCreateCategoryInputRecord] =
-    React.useState(createCategoryInput);
+    React.useState(createCategoryInputModelProp);
   React.useEffect(() => {
     const queryData = async () => {
       const record = idProp
         ? await DataStore.query(CreateCategoryInput, idProp)
-        : createCategoryInput;
+        : createCategoryInputModelProp;
       setCreateCategoryInputRecord(record);
     };
     queryData();
-  }, [idProp, createCategoryInput]);
+  }, [idProp, createCategoryInputModelProp]);
   React.useEffect(resetStateValues, [createCategoryInputRecord]);
   const validations = {
     username: [],
@@ -189,7 +189,7 @@ export default function CreateCategoryInputUpdateForm(props) {
             event.preventDefault();
             resetStateValues();
           }}
-          isDisabled={!(idProp || createCategoryInput)}
+          isDisabled={!(idProp || createCategoryInputModelProp)}
           {...getOverrideProps(overrides, "ResetButton")}
         ></Button>
         <Flex
@@ -201,7 +201,7 @@ export default function CreateCategoryInputUpdateForm(props) {
             type="submit"
             variation="primary"
             isDisabled={
-              !(idProp || createCategoryInput) ||
+              !(idProp || createCategoryInputModelProp) ||
               Object.values(errors).some((e) => e?.hasError)
             }
             {...getOverrideProps(overrides, "SubmitButton")}

@@ -14,7 +14,7 @@ import { DataStore } from "aws-amplify";
 export default function TodoUpdateForm(props) {
   const {
     id: idProp,
-    todo,
+    todo: todoModelProp,
     onSuccess,
     onError,
     onSubmit,
@@ -40,14 +40,16 @@ export default function TodoUpdateForm(props) {
     setDescription(cleanValues.description);
     setErrors({});
   };
-  const [todoRecord, setTodoRecord] = React.useState(todo);
+  const [todoRecord, setTodoRecord] = React.useState(todoModelProp);
   React.useEffect(() => {
     const queryData = async () => {
-      const record = idProp ? await DataStore.query(Todo, idProp) : todo;
+      const record = idProp
+        ? await DataStore.query(Todo, idProp)
+        : todoModelProp;
       setTodoRecord(record);
     };
     queryData();
-  }, [idProp, todo]);
+  }, [idProp, todoModelProp]);
   React.useEffect(resetStateValues, [todoRecord]);
   const validations = {
     name: [{ type: "Required" }],
@@ -188,7 +190,7 @@ export default function TodoUpdateForm(props) {
             event.preventDefault();
             resetStateValues();
           }}
-          isDisabled={!(idProp || todo)}
+          isDisabled={!(idProp || todoModelProp)}
           {...getOverrideProps(overrides, "ResetButton")}
         ></Button>
         <Flex
@@ -200,7 +202,7 @@ export default function TodoUpdateForm(props) {
             type="submit"
             variation="primary"
             isDisabled={
-              !(idProp || todo) ||
+              !(idProp || todoModelProp) ||
               Object.values(errors).some((e) => e?.hasError)
             }
             {...getOverrideProps(overrides, "SubmitButton")}

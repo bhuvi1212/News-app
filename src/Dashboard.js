@@ -18,7 +18,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import Settings from './Setting.js';
 import { Authenticator } from '@aws-amplify/ui-react';
 import { Refresh } from '@mui/icons-material';
-
+//sjd
 function Dashboard() {
     const [user, setUser] = useState(null);
     const [categories, setCategories] = useState(['general']);

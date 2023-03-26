@@ -97,6 +97,6 @@ Requirements for Status Codes:<br/>
 |ID-0031|Thanmai|03/16/2023|Pass|The Database is successfully fetching the data|
 |ID-0032|Thanmai|03/16/2023|Pass|They are succesfully being displayed|
 |ID-0033|Thanmai|03/16/2023|Pass|They are succesfully being displayed|
-|ID-0034|Thanmai|03/18/2023|Fail|The code is not shown|
+|ID-0034|Thanmai|03/18/2023|Pass|They are succesfully being displayed|
 |ID-0035|Thanmai|03/18/2023|Fail|The code is not shown|
 |ID-0036|Thanmai|03/18/2023|Fail|The code is not shown|
